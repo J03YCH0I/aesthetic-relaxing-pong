@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breakout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- The whole game is drawn on this canvas -->
+  <canvas id="game" width="600" height="720"></canvas>
+
+  <!-- Game Over screen (hidden until you run out of lives) -->
+  <div id="game-over" class="screen hidden">
+    <div class="panel">
+      <h1>Game Over</h1>
+      <p id="final-time"></p>
+      <p id="best-time"></p>
+      <button id="restart-btn">Play Again</button>
+      <p class="hint">or press Enter</p>
+    </div>
+  </div>
+
+  <!-- Order matters: script.js uses functions from the two files before it -->
+  <script src="sound.js"></script>
+  <script src="effects.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
